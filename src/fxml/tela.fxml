@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaController">
+   <center>
+      <HBox spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" prefWidth="0.0" spacing="3.0">
+                     <children>
+                        <Label text="Copo:" />
+                        <TextField fx:id="medidaCopo" onInputMethodTextChanged="#atualizarTamanhoCopo" prefHeight="25.0" prefWidth="45.0" text="160" />
+                        <Label text="ml" />
+                     </children>
+                  </HBox>
+                  <Pane fx:id="parentCoffeePane" prefHeight="267.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </VBox.margin></Pane>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#confirmar" text="Confirmar!" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label fx:id="labelDataAtual" text="Hoje (12/03/2017)" />
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <FlowPane prefHeight="200.0" prefWidth="200.0" />
+                              <ToolBar prefHeight="40.0" prefWidth="200.0">
+                                 <items>
+                                    <Label fx:id="labelInfoIngestao" text="3 copos de 160ml | 380ml no total" />
+                                 </items>
+                              </ToolBar>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <Label text="Estatisticas" />
+                        <TableView editable="true" prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="C1" />
+                            <TableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+</BorderPane>
